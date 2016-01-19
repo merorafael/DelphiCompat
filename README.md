@@ -38,7 +38,7 @@ Class for managing color in TColor format.
 namespace Acme\Bundle\BlogBundle;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Mero\DelphiCompat\Converter\TColor;
+use Mero\DelphiCompat\TColor;
 
 class NewsController extends Controller
 {
