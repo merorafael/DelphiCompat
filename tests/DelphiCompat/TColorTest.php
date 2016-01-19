@@ -1,5 +1,5 @@
 <?php
-namespace Mero\DelphiCompat\Converter;
+namespace Mero\DelphiCompat;
 
 class TColorTest extends \PHPUnit_Framework_TestCase
 {
@@ -64,22 +64,15 @@ class TColorTest extends \PHPUnit_Framework_TestCase
         ]
     ];
 
-    public function testConvertToRGB()
+    public function testConverters()
     {
-        $converter = new TColor();
         foreach ($this->colors as &$color) {
-            $colorRGB = $converter->convertToRGB($color['tcolor']);
-            $this->assertEquals($color['rgb'], $colorRGB);
+            $tcolor = new TColor($color['tcolor']);
+            $this->assertEquals($color['rgb'], $tcolor->getRGB());
+            $this->assertEquals($color['hex'], $tcolor->getHex());
+            unset($tcolor);
         }
-    }
 
-    public function testConvertToHex()
-    {
-        $converter = new TColor();
-        foreach ($this->colors as &$color) {
-            $colorHex = $converter->convertToHex($color['tcolor']);
-            $this->assertEquals($color['hex'], $colorHex);
-        }
     }
 
 }

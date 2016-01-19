@@ -19,15 +19,18 @@ Instalation with composer
 1. Open your project directory;
 2. Run `composer require mero/delphi-compat` to add DelphiCompat in your project vendor.
 
-TColor converter
-----------------
+TColor
+------
 
-Abstract controller with basic methods for easy identification framework resources.
+Class for managing color in TColor format.
 
 | Name                         | Atributes   | Description                           |
 | ---------------------------- | ------------| ------------------------------------- |
-| convertToRGB                 | $color      | Convert TColor format to RGB          |
-| convertToHex                 | $color      | Convert TColor format to hex          |
+| __construct                  | $color      | Construct calling setColor            |
+| setColor                     | $color      | Define color using TColor format      |
+| getTColor                    |             | Return color in TColor format         |
+| getRGB                       |             | Return color in RGB format            |
+| getHex                       |             | Return color in hex format            |
 
 
 ### Usage example:
@@ -35,7 +38,6 @@ Abstract controller with basic methods for easy identification framework resourc
 namespace Acme\Bundle\BlogBundle;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Request;
 use Mero\DelphiCompat\Converter\TColor;
 
 class NewsController extends Controller
@@ -44,12 +46,14 @@ class NewsController extends Controller
     /**
      * @Route("/", name="news")
      */
-    public function indexAction(Request $request)
+    public function indexAction()
     {
-        $color = '16744576';
-        $converter = new TColor();
-        $colorRGB = $this->convertToRGB($color); // Return Array([r] => 128, [g] => 128, [b] => 255)
-        $colorHex = $this->convertToHex($color); // Return "#8080ff"
+        $tcolor = new TColor("16744576");
+        $colorRGB = $tcolor->getRGB(); // Return Array([r] => 128, [g] => 128, [b] => 255)
+        $colorHex = $tcolor->getHex(); // Return "#8080ff"
+        $colorTColor = $tcolor->getTColor(); // Return "16744576"
+        $tcolor->setColor("0");
+        $colorHex = $tcolor->getHex(); // Return "#000000"
     }
 
 }
