@@ -17,8 +17,7 @@ Instalation with composer
 -------------------------
 
 1. Open your project directory;
-2. Run `composer require mero/delphi-compat` to add DelphiCompat in your project vendor;
-3. Run `composer update` command.
+2. Run `composer require mero/delphi-compat` to add DelphiCompat in your project vendor.
 
 TColor converter
 ----------------
