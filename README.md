@@ -42,10 +42,10 @@ class NewsController extends Controller
      */
     public function indexAction(Request $request)
     {
-        $color = '255';
+        $color = '16744576';
         $converter = new TColor();
-        $colorRGB = $this->convertToRGB($color); // Return Array([r] => 255, [g] => 0, [b] => 0)
-        $colorHex = $this->convertToHex($color); // Return "#ff0000"
+        $colorRGB = $this->convertToRGB($color); // Return Array([r] => 128, [g] => 128, [b] => 255)
+        $colorHex = $this->convertToHex($color); // Return "#8080ff"
     }
 
 }
