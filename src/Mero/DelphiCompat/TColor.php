@@ -1,9 +1,9 @@
 <?php
+
 namespace Mero\DelphiCompat;
 
 class TColor
 {
-
     /**
      * @var string Color in TColor format
      */
@@ -42,7 +42,7 @@ class TColor
         $this->rgb = [
             'r' => $color & 0xFF,
             'g' => ($color >> 8) & 0xFF,
-            'b' => ($color >> 16) & 0xFF
+            'b' => ($color >> 16) & 0xFF,
         ];
         $hexRed = str_pad(dechex($this->rgb['r']), 2, '0', STR_PAD_LEFT);
         $hexGreen = str_pad(dechex($this->rgb['g']), 2, '0', STR_PAD_LEFT);
@@ -81,5 +81,4 @@ class TColor
     {
         return $this->hex;
     }
-
 }

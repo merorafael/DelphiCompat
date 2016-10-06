@@ -1,9 +1,11 @@
 <?php
+
 namespace Mero\DelphiCompat;
 
-class TColorTest extends \PHPUnit_Framework_TestCase
-{
+use PHPUnit\Framework\TestCase;
 
+class TColorTest extends TestCase
+{
     /**
      * @var array Colors in TColor format
      */
@@ -14,8 +16,8 @@ class TColorTest extends \PHPUnit_Framework_TestCase
             'rgb' => [
                 'r' => 0,
                 'g' => 128,
-                'b' => 0
-            ]
+                'b' => 0,
+            ],
         ],
         [
             'tcolor' => '255',
@@ -23,8 +25,8 @@ class TColorTest extends \PHPUnit_Framework_TestCase
             'rgb' => [
                 'r' => 255,
                 'g' => 0,
-                'b' => 0
-            ]
+                'b' => 0,
+            ],
         ],
         [
             'tcolor' => '16744576',
@@ -32,8 +34,8 @@ class TColorTest extends \PHPUnit_Framework_TestCase
             'rgb' => [
                 'r' => 128,
                 'g' => 128,
-                'b' => 255
-            ]
+                'b' => 255,
+            ],
         ],
         [
             'tcolor' => '8421631',
@@ -41,8 +43,8 @@ class TColorTest extends \PHPUnit_Framework_TestCase
             'rgb' => [
                 'r' => 255,
                 'g' => 128,
-                'b' => 128
-            ]
+                'b' => 128,
+            ],
         ],
         [
             'tcolor' => '0',
@@ -50,8 +52,8 @@ class TColorTest extends \PHPUnit_Framework_TestCase
             'rgb' => [
                 'r' => 0,
                 'g' => 0,
-                'b' => 0
-            ]
+                'b' => 0,
+            ],
         ],
         [
             'tcolor' => '8388863',
@@ -59,9 +61,9 @@ class TColorTest extends \PHPUnit_Framework_TestCase
             'rgb' => [
                 'r' => 255,
                 'g' => 0,
-                'b' => 128
-            ]
-        ]
+                'b' => 128,
+            ],
+        ],
     ];
 
     public function testConverters()
@@ -72,7 +74,5 @@ class TColorTest extends \PHPUnit_Framework_TestCase
             $this->assertEquals($color['hex'], $tcolor->getHex());
             unset($tcolor);
         }
-
     }
-
 }

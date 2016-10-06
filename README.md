@@ -2,6 +2,7 @@ DelphiCompat
 ============
 
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/8183d0f4-e57f-44da-a11b-e9c746427deb/mini.png)](https://insight.sensiolabs.com/projects/8183d0f4-e57f-44da-a11b-e9c746427deb)
+[![Build Status](https://travis-ci.org/merorafael/DelphiCompat.svg?branch=master)](https://travis-ci.org/merorafael/DelphiCompat)
 [![Latest Stable Version](https://poser.pugx.org/mero/delphi-compat/v/stable.svg)](https://packagist.org/packages/mero/delphi-compat)
 [![Total Downloads](https://poser.pugx.org/mero/delphi-compat/downloads.svg)](https://packagist.org/packages/mero/delphi-compat)
 [![License](https://poser.pugx.org/mero/delphi-compat/license.svg)](https://packagist.org/packages/mero/delphi-compat)
