@@ -2,9 +2,7 @@
 
 namespace Mero\DelphiCompat;
 
-use PHPUnit\Framework\TestCase;
-
-class TColorTest extends TestCase
+class TColorTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @var array Colors in TColor format
